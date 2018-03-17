@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ipramodsinghrawat.it.socialloginintegration.MainActivity">
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/g_sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/g_sign_out_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Google LogOut"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/g_sign_in_button"/>
+
+    <Button
+        android:id="@+id/facebook_logout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Facebook LogOut"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/g_sign_in_button"/>
+
+    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id="@+id/twitter_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"/>
+    <Button
+        android:id="@+id/twitter_logout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="twitter LogOut"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello User!"
+        android:id="@+id/usrDtlsTV"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/twitter_logout_button"/>
+
+    <ImageView
+        android:id="@+id/userImageView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@+id/usrDtlsTV"/>
+
+
+    <!--com.google.android.gms.common.SignOutButton
+        android:id="@+id/button_sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /-->
+
+</android.support.constraint.ConstraintLayout>
